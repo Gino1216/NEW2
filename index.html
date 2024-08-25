@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThanhDieu-Template</title>
+    <link href="./Css-Javascript/css2" rel="stylesheet">
+    <link rel="stylesheet" href="./Css-Javascript/home.css">
+    <script>
+        function playAudio() {
+            var audio = document.getElementById('myAudio');
+            if (audio.paused) {
+                audio.play();
+            }
+        }
+
+        function pauseAudio() {
+            var audio = document.getElementById('myAudio');
+            if (!audio.paused) {
+                audio.pause();
+            }
+        }
+
+        // Add event listener to play audio on first click
+        window.addEventListener('click', function() {
+            playAudio();
+        });
+    </script>
+</head>
+<body>
+    <div id="particles-js">
+        <canvas class="particles-js-canvas-el" width="1108" height="1586" style="width: 100%; height: 100%;"></canvas>
+    </div>
+    <div class="min-h-full flex-h-center page-bg" id="background_div">
+        <div class="background-overlay"></div>
+        <div class="mt-36 page-full-wrap relative">
+            <img class="display-image m-auto" src="Css-Javascript/avatar.jpg">
+            <h2 class="page-title page-text-color page-text-font mt-16 text-center">
+                GinoDev 
+            </h2>
+            <div class="page-bioline text-fs-16 page-text-color page-text-font mt-8 ln-h-22 text-center">
+                I'm a full stack web developer!
+            </div>
+            <div class="flex-both-center flex-wrap mt-16">
+                <audio id="myAudio" preload="auto">
+                    <source src="music.ogg" type="audio/ogg">
+                    <source src="music.mp3" type="audio/mpeg">
+                </audio>
+                <button class="glow-on-hover" onclick="playAudio()" type="button">Play Music</button>&nbsp;&nbsp;
+                <button class="glow-on-hover" onclick="pauseAudio()" type="button">Stop Music</button>
+            </div>
+            <div class="mt-32">
+                <div class="page-item-wrap relative">
+                    <div class="page-item flex-both-center relative"></div>
+                    <a rel="noopener nofollow" class="page-item-each flex-both-center" href="https://github.com/Gino1216" target="_blank">Github</a>
+                </div>
+                <div class="page-item-wrap relative">
+                    <div class="page-item flex-both-center relative"></div>
+                    <a rel="noopener nofollow" class="page-item-each flex-both-center" href="https://www.facebook.com/gphonnn16/" target="_blank">Facebook</a>
+                </div>
+                <div class="page-item-wrap relative">
+                    <div class="page-item flex-both-center relative"></div>
+                    <a rel="noopener nofollow" class="page-item-each flex-both-center" href="https://www.instagram.com/eltrut_dec/" target="_blank">Instagram</a>
+                </div>
+                <div class="page-item-wrap relative">
+                    <div class="page-item flex-both-center relative"></div>
+                    <a rel="noopener nofollow" class="page-item-each flex-both-center" href="https://www.youtube.com/@tempuster1216" target="_blank">Youtube</a>
+                </div>
+                <div class="text-center">
+                    <br>
+                    <p style="font-size: 14px; color: gray; font-family: Arial;">© Copy Gino</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
