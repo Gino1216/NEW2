@@ -1,0 +1,35 @@
+h4{
+    text-align: right;
+}
+h1{
+    color:rgb(19,151,151);
+}
+#involve {
+    background-color: rgb(66, 189, 189);
+    color: white;
+
+}
+body {
+    font-family: 'Roboto Slab', serif;
+    max-width: 560px;
+    margin: 0 auto;
+    height:auto;
+}
+img {
+    width: 560px;
+    height: 430px;
+    background-color: rgb(194,186,186);
+    text-align: center;
+}
+.note{
+    color: rgb(66, 68, 189);
+    display: block;
+    text-align: center;
+    font-weight: bold;
+}
+a:hover{
+    color: rgb(228, 228, 19);
+}
+b{
+    font-style: italic;
+}
