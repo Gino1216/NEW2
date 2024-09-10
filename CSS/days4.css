@@ -1,0 +1,130 @@
+body{
+    height: 2000px;
+     margin: 0;
+     padding: 0;
+ }
+ .thanhtimkiem{
+     border: 2px solid black;
+     border-radius: 40px;
+     padding-top: 10px;
+     padding-bottom: 10px;
+     padding-left: 5px;
+     max-width: 6cm;
+     background-color: white;
+     display: flex;
+     align-items: center;
+ }
+ .kinhlup{
+     padding-left: 110px;
+     padding-right: 15px;
+ }
+ 
+ .panel1{
+     display: flex;
+     align-items: center;
+     position: fixed;
+     
+     width: 100%;
+     z-index: 1000;
+     top: 0px;
+     background-color:rgb(255, 255, 255);
+     
+
+     
+ }
+ div.panel1 a{
+     padding:17px 25px ;
+     text-decoration: none;
+     margin: 0;
+    font-size: 17px;
+    color: black;            
+
+ }
+ .panel1 a:hover{
+     background-color:#04aa6d ;
+ }
+ .panel2{
+     display: flex;
+     position: fixed;
+     top: 54px;
+    overflow-y: hidden;
+    background-color: #282a35;
+    
+     
+ }
+ div.panel2 a{
+     padding: 14px 21px;
+white-space: nowrap;
+     width: 100%;
+     color: white;
+     float: left;
+     text-decoration: none;
+     margin: 0;
+     background-color: #282a35;           
+ }
+ .panel2 a:hover{
+     background-color:black;
+ }
+ .panel3{
+     position: fixed;
+     display: flex;
+     flex-direction: column;
+     max-width: 7cm;
+     overflow-x: hidden;
+     overflow-y: scroll;
+     background-color: rgb(225, 225, 225);
+     max-height: 83vh;
+     z-index: 998;
+     top: 101px
+    
+ }
+ div.panel3 a{
+     padding-top: 5px;
+     padding-bottom: 5px;
+     padding-left: 1cm;
+     padding-right: 2cm;
+     color: black;
+   text-decoration: none;  
+   
+ }
+ .panel3 a:hover{
+     background-color: rgba(10, 5, 4, 0.15);
+
+ }
+ .main{
+     position: absolute;
+  top: 6cm;
+ left: 8cm;
+ z-index: 998;
+ }
+ .btn{
+display: flex;
+justify-content: start;
+}
+button{
+background-color: #04aa6d;
+width: 115px;
+height: 50px;
+border: none;
+border-radius: 5px;
+font-size: 16px;
+font-weight: 600;
+color: #fff;
+}
+button:hover{
+cursor: pointer;
+background-color: #048153;
+
+}
+.Content{
+background-color: #d9eee1;
+padding-top: 25px;
+padding-bottom: 25px;
+padding-left: 1cm;
+padding-right: 16cm;
+position: absolute;
+top: 10cm;
+left: 7cm;
+color: #111;
+font-size: larger;
+}
