@@ -16,8 +16,8 @@
 <body>
 
 
-  <h2 class="page-title page-text-color page-text-font mt-16 text-center">Gino <img
-      src="avatar.jpg" width="17" height="17" alpha="_ThanhDieu_">
+  <h2 class="page-title page-text-color page-text-font mt-16 text-center">Gino <img src="avatar.jpg" width="17"
+      height="17" alpha="_ThanhDieu_">
   </h2>
   <div class="page-bioline text-fs-16 page-text-color page-text-font mt-8 ln-h-22 text-center">I'm a full stack web
     developer!</div>
@@ -68,6 +68,32 @@
     } 
   </script>
   <script type="text/javascript" src="CSS/p.js"></script>
+  <script>//<![CDATA[
+    const disabledKeys = ["c", "C", "x", "J", "u", "I"];
+    const showAlert = e => {
+      e.preventDefault();
+      return alert("Sorry, you can't view or copy source codes this way!");
+    }
+    document.addEventListener("contextmenu", e => {
+      showAlert(e);
+    });
+    document.addEventListener("keydown", e => {
+      // calling showAlert() function, if the pressed key matched to disabled keys
+      if ((e.ctrlKey && disabledKeys.includes(e.key)) || e.key === "F12") {
+        showAlert(e);
+      }
+    });
+    window.addEventListener("load", function () {
+      try {
+        !function t(n) {
+          1 === ("" + n / n).length && 0 !== n || function () { }.constructor("debugger")(), t(++n)
+        }(0)
+      } catch (n) {
+        setTimeout(t, 100)
+      }
+    });
+    </script>
+
 </body>
 <div class="troywell-avia"></div>
 <div class="troywell-caa"></div>
