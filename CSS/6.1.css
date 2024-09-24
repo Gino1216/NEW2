@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1f1b2e;
+    margin: 0;
+    padding: 15px;
+}
+
+.album-hot {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.album {
+    width: 190px;
+    text-align: center;
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+/* Ginooooooooooo */
+
+
+.fa-play-circle, .heart-icon {
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    right: 45%;
+    left: 55%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.fa-play-circle {
+    color: white;
+}
+.heart-icon {
+    left: 80px;
+    height: 15px;
+    fill: none;
+    top: 50%;
+}
+
+.image-container:hover .fa-play-circle,
+.image-container:hover .heart-icon {
+    opacity: 1;
+}
+
+.album-info p {
+    margin: 5px 0 5px;
+    color: white;
+}
+.album-info :hover .p{
+    color: blueviolet;
+}

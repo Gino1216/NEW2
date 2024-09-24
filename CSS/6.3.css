@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.grid-item {
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ddd;
+}
+
+.grid-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.wide {
+    grid-column: span 2;
+}
+
+/* Menu icon */
+#menuToggle {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 2;
+    background-color: transparent;
+}
+
+#menuToggle::before,
+#menuToggle::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    transition: 0.3s;
+}
+
+/* Thanh trên của icon menu (hamburger) */
+#menuToggle::before {
+    top: 0;
+}
+
+/* Thanh dưới của icon menu (hamburger) */
+#menuToggle::after {
+    bottom: 0;
+}
+
+/* Hiệu ứng khi mở menu, biểu tượng "X" */
+#menuToggle.open::before {
+    transform: rotate(45deg);
+    top: 12px;
+}
+
+#menuToggle.open::after {
+    transform: rotate(-45deg);
+    bottom: 12px;
+}
+
+/* Overlay styling */
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9); /* Màu nền tối với độ trong suốt */
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+/* Overlay content */
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay-content a {
+    padding: 10px;
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay-content a:hover,
+.overlay-content a:focus {
+    color: #f1f1f1;
+    text-decoration: underline;
+}

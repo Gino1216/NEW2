@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Example</title>
+    <link rel="stylesheet" href="CSS/6.3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .menu-icon {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        .menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            color: white;
+            z-index: 999;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        .menu a {
+            display: block;
+            font-size: 24px;
+            padding: 15px 0;
+            text-decoration: none;
+            color: white;
+            transition: 0.3s;
+        }
+
+        .menu a:hover {
+            color: #f1f1f1;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 10px;
+            padding: 20px;
+        }
+
+        .container .grid-item {
+            overflow: hidden;
+        }
+
+        .container .grid-item img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        .grid-item.wide {
+            grid-column: span 2;
+        }
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <i class="fas fa-bars menu-icon"></i>
+    <div class="menu" id="menuOverlay">
+        <a href="#">Home</a>
+        <a href="#">Portfolio</a>
+        <a href="#">Team</a>
+        <a href="#">Services</a>
+        <a href="#">Blog</a>
+        <a href="#">Contact</a>
+        <a href="#">Buy Now!</a>
+        <a href="#">Search</a>
+    </div>
+
+    <div class="container">
+        <div class="grid-item wide"> 
+            <img src="https://www.didongmy.com/vnt_upload/news/05_2024/anh-27-meme-dang-yeu-didongmy.jpg" alt="Image 1">
+        </div>
+        <div class="grid-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQkKkmK8rEXBLDNrqtaD5Z95OaJaYT2y2l5g&s" alt="Image 2">
+        </div>
+        <div class="grid-item">
+            <img src="https://cdn.cmp.edu.vn/wp-content/uploads/2024/09/anh-meo-khinh-bi.jpg" alt="Image 3">
+        </div>
+        <div class="grid-item"> 
+            <img src="https://www.didongmy.com/vnt_upload/news/05_2024/anh-27-meme-dang-yeu-didongmy.jpg" alt="Image 4">
+        </div>
+        <div class="grid-item">
+            <img src="https://www.didongmy.com/vnt_upload/news/05_2024/anh-27-meme-dang-yeu-didongmy.jpg" alt="Image 5">
+        </div>
+    </div>
+    <script>
+        const menuIcon = document.querySelector('.menu-icon');
+        const menuOverlay = document.getElementById('menuOverlay');
+
+        menuIcon.addEventListener('click', () => {
+            if (menuOverlay.style.display === 'block') {
+                menuOverlay.style.display = 'none';
+            } else {
+                menuOverlay.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,232 @@
+/* Thiết lập mặc định cho tất cả các phần tử */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Thiết lập font chữ và độ rộng trang */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+/* Phần tiêu đề chính */
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* Phần mô tả nhỏ dưới tiêu đề */
+p {
+    text-align: center;
+    font-size: 1rem;
+    color: gray;
+    margin-bottom: 40px;
+}
+
+/* Phần chứa sản phẩm, mỗi sản phẩm chiếm 1 ô */
+.product-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Định dạng cho mỗi sản phẩm */
+.product {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    width: 23%; /* Chiếm 23% chiều rộng để có 4 sản phẩm mỗi hàng */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Tạo bóng cho sản phẩm */
+    transition: transform 0.3s ease-in-out; /* Hiệu ứng hover */
+}
+
+/* Hiệu ứng khi di chuột vào sản phẩm */
+.product:hover {
+    transform: scale(1.05);
+}
+
+/* Ảnh sản phẩm */
+.product img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+/* Tên sản phẩm */
+.product h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Giá sản phẩm */
+.product .price {
+    font-size: 1.5rem;
+    color: black;
+    margin-bottom: 10px;
+}
+
+/* Phần mô tả thêm cho sản phẩm */
+.product .category {
+    font-size: 0.9rem;
+    color: gray;
+}
+
+        /* Thiết lập mặc định cho tất cả các phần tử */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Thiết lập cho toàn bộ trang */
+        body, html {
+            height: 100%;
+            font-family: 'Arial', sans-serif; /* Font mặc định */
+        }
+
+        /* Phần chứa nền và nội dung */
+        .hero-section {
+            background-color: #7b6f67; /* Màu nền nâu xám */
+            height: 100vh; /* Chiều cao của phần này chiếm toàn bộ chiều cao màn hình */
+            position: relative;
+        }
+
+        /* Phần chứa logo bên trái */
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        .logo img {
+            width: 120px; /* Điều chỉnh kích thước logo */
+        }
+
+        /* Phần menu trên cùng */
+        .navbar {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 1rem;
+        }
+
+        .navbar a:hover {
+            border-bottom: 2px solid white; /* Hiệu ứng hover cho menu */
+        }
+
+        /* Phần chứa văn bản ở bên phải */
+        .hero-content {
+            position: absolute;
+            top: 40%;
+            right: 10%;
+            transform: translateY(-50%);
+            color: white;
+            text-align: left;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem; /* Kích thước chữ tiêu đề */
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 1.3rem; /* Kích thước chữ cho đoạn văn */
+            margin-bottom: 30px;
+        }
+
+        /* Phần nút "Shop Now" */
+        .btn {
+            background-color: black; /* Màu nền nút */
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            border-radius: 30px; 
+        }
+
+        .btn:hover {
+            background-color: #444; 
+        }
+
+        .model-image {
+            position: absolute;
+            top: 15%;
+            left: 10%;
+            transform: translateY(-15%);
+        }
+
+        .model-image img {
+            width: 350px;
+        }
+        nav {
+            background-color: #7b6f68;
+            padding: 15px;
+            position: relative; 
+        }
+        
+        .menu {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            position: absolute; 
+            right: 0; 
+        }
+        
+        .menu-item {
+            position: relative;
+            margin-right: 20px;
+        }
+        
+        .menu-item a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        .menu-item .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%; 
+            left: 0; 
+            background-color: white;
+            border: 1px solid #ccc;
+            list-style: none;
+            padding: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1000; 
+        }
+        
+        .menu-item .dropdown li {
+            margin: 0;
+        }
+        
+        .menu-item .dropdown li a {
+            color: black;
+            padding: 10px 20px;
+            display: block;
+            white-space: nowrap;
+        }
+        
+        .menu-item:hover .dropdown {
+            display: block; 
+        }
+        
+        .menu-item.search img,
+        .menu-item.cart img {
+            width: 20px;
+        }
+        
