@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>btvn buổi 8</title>
+    <script src="CSS/8full.js"></script>
+</head>
+<body>
+    <script>
+        window.alert("Xin Chao");
+    </script>
+    
+    <h1>Tìm số nhỏ nhất, lớn nhất</h1>
+    
+    <p>Nhập số:</p>
+    <input type="text" id="numbers" placeholder="VD: 1, 2, 3,">
+    <button onclick="findLargestSmallest()">Tìm</button>
+    
+    <p id="result"></p>
+
+    <script>
+        function findLargestSmallest() {
+            var input = document.getElementById("numbers").value;
+            var arr = input.split(',').map(Number);
+            var largest = arr[0];
+            var smallest = arr[0];
+        
+            for (var i = 1; i < arr.length; i++) {
+                if (arr[i] > largest) {
+                    largest = arr[i];
+                }
+                if (arr[i] < smallest) {
+                    smallest = arr[i];
+                }
+            }
+            
+            document.getElementById("result").innerHTML = 
+                "Số lớn nhất là: " + largest + "<br>Số nhỏ nhất là: " + smallest;
+        }
+    </script>  
+</body>
+</html>
