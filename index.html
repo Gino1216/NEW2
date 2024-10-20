@@ -12,12 +12,292 @@
     <div class="background-overlay"></div>
     <div class="mt-36 page-full-wrap relative">
       <img class="display-image m-auto" src="avatar.jpg">
+      <style>
+        /* Menu styles */
+        .menu {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          background-color: rgba(255, 255, 255, 0);
+          /* Transparent */
+          padding: 10px;
+          z-index: 100;
+          text-align: center;
+        }
+
+        .menu a {
+          color: white;
+          text-decoration: none;
+          font-size: 18px;
+          font-family: Arial, sans-serif;
+          margin: 0 15px;
+          transition: color 0.3s ease;
+        }
+
+        .menu a:hover {
+          color: #ffcc00;
+        }
+
+        .menu {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          background-color: rgba(255, 255, 255, 0);
+          padding: 10px;
+          z-index: 100;
+          text-align: center;
+        }
+
+        .menu a {
+          color: white;
+          text-decoration: none;
+          font-size: 18px;
+          font-family: Arial, sans-serif;
+          margin: 0 15px;
+          transition: color 0.3s ease;
+        }
+
+        .menu a:hover {
+          color: #ffcc00;
+        }
+
+        /* Dropdown styles */
+        .dropdown {
+          display: inline-block;
+          position: relative;
+        }
+
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: rgba(255, 255, 255, 0.9);
+          min-width: 160px;
+          z-index: 1;
+        }
+
+        .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+        }
+
+        .dropdown:hover .dropdown-content {
+          display: block;
+        }
+
+        .dropdown-content a:hover {
+          background-color: #f1f1f1;
+        }
+
+        /* Dropdown styles */
+        .dropdown {
+          display: inline-block;
+          position: relative;
+        }
+
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: rgba(255, 255, 255, 0.9);
+          min-width: 160px;
+          z-index: 1;
+        }
+
+        .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+        }
+
+        /* Styles for sub-dropdown */
+        .sub-dropdown {
+          position: relative;
+        }
+
+        .sub-dropdown-content {
+          display: none;
+          position: absolute;
+          left: 100%;
+          /* Hiển thị sang bên phải */
+          top: 0;
+          /* Căn với đầu dòng chính */
+          background-color: rgba(255, 255, 255, 0.9);
+          min-width: 160px;
+          z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+          display: block;
+        }
+
+        .sub-dropdown:hover .sub-dropdown-content {
+          display: block;
+          /* Hiển thị khi hover vào Task 1 */
+        }
+
+        .dropdown-content a:hover {
+          background-color: #f1f1f1;
+        }
+
+        .sub-dropdown-content a:hover {
+          background-color: #e2e2e2;
+          /* Màu nền cho các mục con */
+        }
+
+        .skills-section {
+          margin: 20px 0;
+          padding: 20px;
+          background-color: rgba(255, 255, 255, 0.9);
+          border-radius: 8px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .skills-section h2 {
+          font-size: 24px;
+          color: #333;
+        }
+
+        .skills-section ul {
+          list-style-type: none;
+          padding: 0;
+        }
+
+        .skills-section li {
+          font-size: 18px;
+          color: #555;
+        }
+
+        /* Responsive styles for mobile */
+        @media (max-width: 768px) {
+          .menu a {
+            font-size: 16px;
+            /* Giảm kích thước font cho menu trên thiết bị di động */
+            margin: 0 10px;
+            /* Giảm khoảng cách giữa các liên kết menu */
+          }
+
+          .skills-section {
+            padding: 10px;
+            /* Giảm padding cho phần kỹ năng */
+          }
+
+          .skills-section h2 {
+            font-size: 20px;
+            /* Giảm kích thước font cho tiêu đề */
+          }
+
+          .skills-section li {
+            font-size: 16px;
+            /* Giảm kích thước font cho các mục trong phần kỹ năng */
+          }
+
+          .dropdown-content {
+            min-width: 120px;
+            /* Điều chỉnh chiều rộng dropdown cho thiết bị di động */
+          }
+
+          .dropdown-content a {
+            padding: 10px;
+            /* Giảm padding cho các mục trong dropdown */
+          }
+        }
+      </style>
 
 <body>
-
-  </h2>
-  <div class="page-bioline text-fs-16 page-text-color page-text-font mt-8 ln-h-22 text-center">I'm a full stack web
-    developer!</div>
+  <div class="menu">
+    <a href="#">About Me</a>
+    <a href="#skills">Skills</a>
+    <div class="dropdown">
+      <a href="#projects">Projects</a>
+      <div class="dropdown-content">
+        <div class="sub-dropdown">
+          <a href="#task1">Task 1</a>
+          <div class="sub-dropdown-content">
+            <a href="#subtask1">Subtask 1.1</a>
+            <a href="#subtask2">Subtask 1.2</a>
+            <a href="#subtask3">Subtask 1.3</a>
+          </div>
+        </div>
+        <div class="sub-dropdown">
+          <a href="#task2">Task 2</a>
+          <div class="sub-dropdown-content">
+            <a href="#subtask1">Subtask 2.1</a>
+            <a href="#subtask2">Subtask 2.2</a>
+            <a href="#subtask3">Subtask 2.3</a>
+          </div>
+        </div>
+        <div class="sub-dropdown">
+          <a href="#task3">Task 3</a>
+          <div class="sub-dropdown-content">
+            <a href="#subtask1">Subtask 3.1</a>
+            <a href="#subtask2">Subtask 3.2</a>
+            <a href="#subtask3">Subtask 3.3</a>
+          </div>
+        </div>
+        <div class="sub-dropdown">
+          <a href="#task4">Task 4</a>
+          <div class="sub-dropdown-content">
+            <a href="#subtask1">Subtask 4.1</a>
+            <a href="#subtask2">Subtask 4.2</a>
+            <a href="#subtask3">Subtask 4.3</a>
+          </div>
+        </div>
+        <div class="sub-dropdown">
+          <a href="#task5">Task 5</a>
+          <div class="sub-dropdown-content">
+            <a href="#subtask1">Subtask 5.1</a>
+            <a href="#subtask2">Subtask 5.2</a>
+            <a href="#subtask3">Subtask 5.3</a>
+          </div>
+        </div>
+        <div class="sub-dropdown">
+          <a href="#task6">Task 6</a>
+          <div class="sub-dropdown-content">
+            <a href="#subtask1">Subtask 6.1</a>
+            <a href="#subtask2">Subtask 6.2</a>
+            <a href="#subtask3">Subtask 6.3</a>
+          </div>
+        </div>
+        <div class="sub-dropdown">
+          <a href="#task7">Task 7</a>
+          <div class="sub-dropdown-content">
+            <a href="#subtask1">Subtask 7.1</a>
+            <a href="#subtask2">Subtask 7.2</a>
+            <a href="#subtask3">Subtask 7.3</a>
+          </div>
+        </div>
+        <div class="sub-dropdown">
+          <a href="#task8">Task 8</a>
+          <div class="sub-dropdown-content">
+            <a href="#subtask1">Subtask 8.1</a>
+            <a href="#subtask2">Subtask 8.2</a>
+            <a href="#subtask3">Subtask 8.3</a>
+          </div>
+        </div>
+        <div class="sub-dropdown">
+          <a href="#task9">Task 9</a>
+          <div class="sub-dropdown-content">
+            <a href="https://gino1216.github.io/NEW2/bài-4.html">Subtask 9.1</a>
+            <a href="https://gino1216.github.io/NEW2/bài-5.html">Subtask 9.2</a>
+            <a href="https://gino1216.github.io/NEW2/bài-61.html">Subtask 9.3</a>
+            <a href="https://gino1216.github.io/NEW2/bài-62.html">Subtask 9.4</a>
+          </div>
+        </div>
+        <div class="sub-dropdown">
+          <a href="#task10">Task 10</a>
+          <div class="sub-dropdown-content">
+            <a href="https://gino1216.github.io/NEW2/b1-buooir10.html">Subtask 10.1</a>
+            <a href="https://gino1216.github.io/NEW2/b2-buổi-10.html">Subtask 10.2</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page-bioline text-fs-16 page-text-color page-text-font mt-8 ln-h-22 text-center">Gino</div>
   <div class="flex-both-center flex-wrap mt-16">
     <audio id="myAudio">
       <source src="music.ogg" type="audio/ogg">
@@ -46,7 +326,18 @@
     <a rel="noopener nofollow" class="page-item-each flex-both-center" href="https://www.youtube.com/@tempuster1216"
       target="_blank">Youtube</a>
   </div>
-  
+  <div class="skills-section" id="skills">
+    <h2>My Skills</h2>
+    <div class="flex-both-center">
+      <img src="kisspng-java-development-kit-logo-programming-language-por-java-logo-svg-1713924793188.webp" alt="Java"
+        style="width: 50px; margin: 0 10px;">
+      <img src="Python-logo-notext.svg.png" alt="Python" style="width: 50px; margin: 0 10px;">
+      <img src="25231.png" alt="GitHub" style="width: 50px; margin: 0 10px;">
+    </div>
+  </div>
+
+
+
   <div class="text-center">
     <br>
     <p style="font-size: 14px; color: gray; font-family: Arial;">Copy Right Gino</p>
@@ -90,7 +381,7 @@
         setTimeout(t, 100)
       }
     });
-    </script>
+  </script>
 
 </body>
 <div class="troywell-avia"></div>

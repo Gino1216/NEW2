@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Đăng Ký</title>
+    <style>
+        form {
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <form id="registerForm">
+        <h3>FORM ĐĂNG KÝ</h3>
+        <label for="ho">Họ:</label>
+        <input type="text" id="ho" name="ho"><br>
+
+        <label for="ten">Tên:</label>
+        <input type="text" id="ten" name="ten"><br>
+
+        <label for="ngaysinh">Ngày sinh:</label>
+        <select id="ngay" name="ngay">
+            <option value="1">1</option>
+        </select>
+        <select id="thang" name="thang">
+            <option value="1">1</option>
+        </select>
+        <select id="nam" name="nam">
+            <option value="1980">1980</option>
+        </select><br>
+
+        <label>Giới tính:</label>
+        <input type="radio" id="nam" name="gioitinh" value="Nam">Nam
+        <input type="radio" id="nu" name="gioitinh" value="Nữ">Nữ<br>
+
+        <label for="sodienthoai">Số điện thoại:</label>
+        <input type="text" id="sodienthoai" name="sodienthoai"><br>
+
+        <label>Sở thích:</label>
+        <input type="checkbox" name="sothich" value="docsach">Đọc sách
+        <input type="checkbox" name="sothich" value="xemphim">Xem phim
+        <input type="checkbox" name="sothich" value="nghenhac">Nghe nhạc
+        <input type="checkbox" name="sothich" value="dabong">Đá bóng<br>
+
+        <label for="khac">Khác:</label>
+        <textarea id="khac" name="khac"></textarea><br>
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+
+    <script>
+        document.getElementById("registerForm").addEventListener("submit", function(event) {
+            let ho = document.getElementById("ho").value;
+            let ten = document.getElementById("ten").value;
+            let sodienthoai = document.getElementById("sodienthoai").value;
+
+            if (ho === "" || ten === "") {
+                alert("Họ và Tên không được để trống.");
+                event.preventDefault();  
+            }
+
+            if (!/^\d{10}$/.test(sodienthoai)) {
+                alert("Số điện thoại phải có 10 chữ số.");
+                event.preventDefault();
+            }
+        });
+    </script>
+
+</body>
+</html>

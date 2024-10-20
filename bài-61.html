@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đổi màu</title>
+    <style>
+        .button {
+            padding: 10px 20px;
+            background-color: gray;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .blue-background {
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="colorButton" class="button">đổi màu tôi đi</button>
+
+    <script>
+        document.getElementById("colorButton").addEventListener("click", function() {
+            this.classList.toggle("blue-background");
+        });
+    </script>
+
+</body>
+</html>

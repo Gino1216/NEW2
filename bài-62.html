@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phép Toán</title>
+    <style>
+        .result {
+            margin-top: 20px;
+        }
+        .red {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Các phép toán</h2>
+
+<form id="calcForm">
+    Phép cộng: <input type="number" id="cong1"> + <input type="number" id="cong2"> = <input type="text" id="ketquaCong" readonly><br><br>
+    Phép trừ: <input type="number" id="tru1"> - <input type="number" id="tru2"> = <input type="text" id="ketquaTru" readonly><br><br>
+    Phép nhân: <input type="number" id="nhan1"> * <input type="number" id="nhan2"> = <input type="text" id="ketquaNhan" readonly><br><br>
+    Phép chia: <input type="number" id="chia1"> / <input type="number" id="chia2"> = <input type="text" id="ketquaChia" readonly><br><br>
+
+    <button type="button" onclick="thuchienPhepToan()">Thực hiện</button>
+</form>
+
+<div id="history" class="result"></div>
+
+<script>
+    function thuchienPhepToan() {
+        // Lấy giá trị của các phép toán
+        let cong1 = parseFloat(document.getElementById("cong1").value);
+        let cong2 = parseFloat(document.getElementById("cong2").value);
+        let tru1 = parseFloat(document.getElementById("tru1").value);
+        let tru2 = parseFloat(document.getElementById("tru2").value);
+        let nhan1 = parseFloat(document.getElementById("nhan1").value);
+        let nhan2 = parseFloat(document.getElementById("nhan2").value);
+        let chia1 = parseFloat(document.getElementById("chia1").value);
+        let chia2 = parseFloat(document.getElementById("chia2").value);
+
+        // Tính kết quả
+        let ketquaCong = cong1 + cong2;
+        let ketquaTru = tru1 - tru2;
+        let ketquaNhan = nhan1 * nhan2;
+        let ketquaChia = chia1 / chia2;
+
+        // Hiển thị kết quả
+        document.getElementById("ketquaCong").value = ketquaCong;
+        document.getElementById("ketquaTru").value = ketquaTru;
+        document.getElementById("ketquaNhan").value = ketquaNhan;
+        document.getElementById("ketquaChia").value = ketquaChia;
+
+        // Lưu lịch sử và đổi màu phép tính vừa thực hiện
+        let history = document.getElementById("history");
+        history.innerHTML = `
+            <p>PHÉP CỘNG: ${cong1} + ${cong2} = ${ketquaCong}</p>
+            <p>PHÉP TRỪ: ${tru1} - ${tru2} = ${ketquaTru}</p>
+            <p>PHÉP NHÂN: ${nhan1} * ${nhan2} = ${ketquaNhan}</p>
+            <p class="red">PHÉP CHIA: ${chia1} / ${chia2} = ${ketquaChia}</p>
+        `;
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Đa Cấp</title>
+    <style>
+        /* Cấu hình cho menu cha */
+        .menu {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu > li {
+            background-color: #0073e6;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        /* Cấu hình cho menu con */
+        .submenu {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: none;
+        }
+
+        .submenu li {
+            background-color: #f2f2f2;
+            color: black;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .submenu li:hover {
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+
+<ul class="menu">
+    <li onclick="toggleMenu()">Thiết kế web
+        <ul class="submenu" id="submenu">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+        </ul>
+    </li>
+</ul>
+
+<script>
+    function toggleMenu() {
+        var submenu = document.getElementById("submenu");
+        if (submenu.style.display === "block") {
+            submenu.style.display = "none";
+        } else {
+            submenu.style.display = "block";
+        }
+    }
+</script>
+
+</body>
+</html>
