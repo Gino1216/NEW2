@@ -18,8 +18,33 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth@87.5&display=swap" rel="stylesheet">
+    <style>
+        .home-icon {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px 20px;
+            border-radius: 20px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            z-index: 100;
+        }
+  
+        .home-icon:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 <body>
+    <a href="index.html" class="home-icon"><i class="fas fa-home"></i> Trang Chủ</a>
+    <script>document.querySelector('.home-icon').addEventListener('click', (event) => {
+            event.preventDefault();
+            window.location.href = 'index.html';
+        });</script>
     <div class="first">
         <div class="backimg">
             <img src="40.df5c2e3164cc8269d8a3.png">
@@ -98,5 +123,9 @@
             <div class="line2">Men, Sweaters</div>
         </div>
     </div>
+    <script>document.querySelector('.home-icon').addEventListener('click', (event) => {
+        event.preventDefault();
+        window.location.href = 'index.html';
+    });</script>
 </body>
 </html>

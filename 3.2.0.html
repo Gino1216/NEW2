@@ -6,8 +6,33 @@
     <title>Mạng xã hội Lotus chính thức ra mắt người dùng Việt</title>
     <link rel="stylesheet" href="CSS/Bt2.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        .home-icon {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px 20px;
+            border-radius: 20px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            z-index: 100;
+        }
+
+        .home-icon:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 <body>
+    <a href="index.html" class="home-icon"><i class="fas fa-home"></i> Trang Chủ</a>
+    <script>document.querySelector('.home-icon').addEventListener('click', (event) => {
+            event.preventDefault();
+            window.location.href = 'index.html';
+        });</script>
     <h1>Mạng xã hội Lotus chính thức ra mắt người dùng Việt</h1>
     <p><b>Tối 16/9, mạng xã hội Lotus đã chính thức được ra mắt người dùng Việt tại Cung Hữu nghị
         Việt-Xô (Hà Nội). Lotus được kỳ vọng nếu thành công sẽ góp phần để đến 2020, người dùng

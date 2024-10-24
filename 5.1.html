@@ -10,9 +10,30 @@
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Material Design</title>
+    <style>
+        .home-icon {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px 20px;
+            border-radius: 20px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            z-index: 100;
+        }
+  
+        .home-icon:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 
 <body>
+    <a href="index.html" class="home-icon"><i class="fas fa-home"></i> Trang Chủ</a>
     <div class="nav">
         <div id="nav"></div>
         <div class="box"><i id="sear" class="fa-solid fa-magnifying-glass"></i>
@@ -299,6 +320,10 @@
             </ul>   
         </div>
     </div>
+    <script>document.querySelector('.home-icon').addEventListener('click', (event) => {
+        event.preventDefault();
+        window.location.href = 'index.html';
+    });</script>
 </body>
 
 </html>

@@ -1,25 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/main2.1.css">
     <title>Document</title>
+    <style>
+        .home-icon {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px 20px;
+            border-radius: 20px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            z-index: 100;
+        }
+
+        .home-icon:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.05);
+        }
+    </style>
 </head>
-<body >
-<div class="header">
-    <span >Công Nghệ</span>
-    <div >VinBrain sử dụng ‘siêu máy tính’ cho các giải pháp ứng dụng AI</div>
 
-    <h3 class="time" >Thái Hà
-        <span >- Thứ ba, 23/2/2021 20:00 (GMT+7)</span>
-        <div></div>
-    </h3>
-</div>
-<div class="container">
-    <h2 class="container__title">Hệ thống siêu máy tính NVIDIA DGX A100 của VinBrain được ứng dụng phát triển nhiều mô hình AI cho các giải pháp chăm sóc sức khỏe, nhà ở thông minh.</h2>
+<body>
+    <a href="index.html" class="home-icon"><i class="fas fa-home"></i> Trang Chủ</a>
+    <div class="header">
+        <span>Công Nghệ</span>
+        <div>VinBrain sử dụng ‘siêu máy tính’ cho các giải pháp ứng dụng AI</div>
 
-    <pre style="font-size: 18px; margin-right: 60px;">
+        <h3 class="time">Thái Hà
+            <span>- Thứ ba, 23/2/2021 20:00 (GMT+7)</span>
+            <div></div>
+        </h3>
+    </div>
+    <div class="container">
+        <h2 class="container__title">Hệ thống siêu máy tính NVIDIA DGX A100 của VinBrain được ứng dụng phát triển nhiều
+            mô hình AI cho các giải pháp chăm sóc sức khỏe, nhà ở thông minh.</h2>
+
+        <pre style="font-size: 18px; margin-right: 60px;">
 VinBrain (thuộc Tập đoàn Vingroup) là một trong những công ty tiên 
 phong sử dụng thế hệ siêu máy tính NVIDIA DGX A100 để phát triển 
 một cách hiệu quả và đột phá các sản phẩm AI. Hệ thống mới này 
@@ -28,13 +52,13 @@ một cách hiệu quả và đột phá các sản phẩm AI. Hệ thống mớ
 nhà thông minh...</pre>
 
         <h2 style="font-size: 46px;">Ứng dụng AI cho các giải pháp chăm sóc sức khỏe</h2>
-    <div style="display: flex;height: 74px;;">
-        <h2 style="font-size: 60px;margin: 10px 10px 0 0px;">D</h2>
-        <pre >
+        <div style="display: flex;height: 74px;;">
+            <h2 style="font-size: 60px;margin: 10px 10px 0 0px;">D</h2>
+            <pre>
 rAid là phần mềm AI do Công ty VinBrain phát triển từ năm 
 2019, nhằm hỗ trợ chẩn đoán các bệnh về phổi, tim và xương </pre>
-</div>
-<pre style="margin-top: 0;">
+        </div>
+        <pre style="margin-top: 0;">
 dựa trên X-quang. DrAid đã hỗ trợ chẩn đoán 19 dấu hiệu bất
 thường và bệnh lý về tim, phổi, xương trong vòng 5 giây với độ chính
 xác trên 88%. Phần mềm này cũng tự động đưa ra báo cáo y tế có 
@@ -42,13 +66,13 @@ khoanh vùng, bản đồ nhiệt và đo kích thước chính xác tại vùng
 thường. Đồng thời, DrAid còn hỗ trợ chia sẻ kết quả chẩn đoán 
 cho bệnh nhân hoặc bác sĩ thứ hai thông qua QR code hoặc đường link.</pre>
 
-<pre>
+        <pre>
 Trước diễn biến phức tạp của đại dịch, DrAid đã được tích hợp thêm 
 chức năng hỗ trợ chẩn đoán, sàng lọc và đánh giá tiên lượng bệnh 
 nhân phục vụ điều trị Covid-19. Phần mềm tự động đưa ra cảnh báo 
 Covid-19, kể cả các trường hợp không có triệu chứng hoặc tổn 
 thương phổi nhẹ.</pre>
-<pre>
+        <pre>
 DrAid có bộ dữ liệu lớn 1,3 triệu hình ảnh X-quang với hơn 275.000 
 hình ảnh đã được gán nhãn và bộ dữ liệu Covid-19 với 7.490 hình
 ảnh dương tính của bệnh nhân. Thông qua ứng dụng các công
@@ -57,22 +81,24 @@ pháp hỗ trợ bác sĩ chẩn đoán hình ảnh, phát hiện các dấu hi�
 bệnh lý, bất thường một cách chính xác, nhất quán và nhanh hơn.
 </pre>
 
-    <img src="https://photo.znews.vn/w1200/Uploaded/wyhktpu/2021_02_23/A1.JPG" alt="sieu may tinh NVIDIA DGX A100 anh 1" class="img" >
-    <div class="container__tacgia">Chuyên gia AI của VinBrain đang sử dụng NVIDIA DGX A100 để đào tạo mô hình AI chẩn đoán bệnh lao.</div>
-   
-    <pre>
+        <img src="https://photo.znews.vn/w1200/Uploaded/wyhktpu/2021_02_23/A1.JPG"
+            alt="sieu may tinh NVIDIA DGX A100 anh 1" class="img">
+        <div class="container__tacgia">Chuyên gia AI của VinBrain đang sử dụng NVIDIA DGX A100 để đào tạo mô hình AI
+            chẩn đoán bệnh lao.</div>
+
+        <pre>
 Việc ứng dụng AI vào chẩn đoán hình ảnh đặc biệt có ý nghĩa khi 
 thế giới hiện có tới 4,7 tỷ người chưa tiếp cận được các dịch vụ này. 
 Ứng dụng của VinBrain càng trở nên hiệu quả hơn khi được kết hợp 
 với siêu máy tính NVIDIA DGX A100.</pre>
-<h2 style="font-size: 46px;">Siêu máy tính hỗ trợ “giải” các bài toán phức tạp</h2>
-<div style="display: flex;height: 74px;;">
-    <h2 style="font-size: 60px;margin-top: 10px;">V</h2>
-    <pre >
+        <h2 style="font-size: 46px;">Siêu máy tính hỗ trợ “giải” các bài toán phức tạp</h2>
+        <div style="display: flex;height: 74px;;">
+            <h2 style="font-size: 60px;margin-top: 10px;">V</h2>
+            <pre>
 inBrain là một trong những công ty đầu tiên trong khu vực 
 nâng cấp thế hệ siêu máy tính NVIDIA DGX A100. Thế hệ siêu</pre>
-</div>
-<pre style="margin-top: 0;">
+        </div>
+        <pre style="margin-top: 0;">
 máy tính này đáp ứng năng lực xử lý thông tin lớn cần thiết để phát 
 triển các mô hình AI, cụ thể như phân loại và phân tách ảnh X
 -quang ngực cho DrAid chẩn đoán; căn chỉnh và phân tách ảnh MRI 
@@ -80,7 +106,7 @@ cho DrAid điều trị; nhận dạng giọng nói và chuyển văn bản thà
 giọng nói để DrAid trợ lý thông minh thực hiện lệnh thoại, chỉnh sửa 
 báo cáo y tế.</pre>
 
-<pre>
+        <pre>
 “Chúng tôi tận dụng DGX A100 để xây dựng các mô hình phức tạp 
 với thời gian dạy máy nhanh hơn, giải quyết các vấn đề thách thức 
 trong chẩn đoán y tế, điều trị và phòng ngừa bệnh. NVIDIA DGX A100 
@@ -88,7 +114,7 @@ giúp chúng tôi đẩy nhanh quá trình phát triển giải pháp. NVIDIA DG
 A100 cung cấp dung lượng bộ nhớ GPU lớn, khả năng tính toán 
 nhanh hơn so với hệ thống NVIDIA trước đó”, ông Trương Quốc Hùng, 
 Giám đốc Điều hành VinBrain cho biết.</pre>
-<pre>
+        <pre>
 DrAid có bộ dữ liệu lớn 1,3 triệu hình ảnh X-quang với hơn 275.000 
 hình ảnh đã được gán nhãn và bộ dữ liệu Covid-19 với 7.490 hình 
 ảnh dương tính của bệnh nhân. Thông qua ứng dụng các công 
@@ -96,9 +122,10 @@ nghệ tiên tiến của AI như học sâu, VinBrain đang phát triển các 
 pháp hỗ trợ bác sĩ chẩn đoán hình ảnh, phát hiện các dấu hiệu 
 bệnh lý, bất thường một cách chính xác, nhất quán và nhanh hơn.
 </pre>
-<img src="https://photo.znews.vn/w1200/Uploaded/wyhktpu/2021_02_23/A2_Ong_TQH.JPG" alt="sieu may tinh NVIDIA DGX A100 anh 2" class="img" >
-<div class="container__tacgia">Ông Trương Quốc Hùng, Giám đốc Điều hành VinBrain.</div>
-<pre>
+        <img src="https://photo.znews.vn/w1200/Uploaded/wyhktpu/2021_02_23/A2_Ong_TQH.JPG"
+            alt="sieu may tinh NVIDIA DGX A100 anh 2" class="img">
+        <div class="container__tacgia">Ông Trương Quốc Hùng, Giám đốc Điều hành VinBrain.</div>
+        <pre>
 Các chuyên gia của VinBrain đang sử dụng hệ thống mới để phát 
 triển hàng loạt dự án ứng dụng AI trong chăm sóc sức khỏe, thành
 phố thông minh/nhà thông minh bao gồm sản phẩm DrAid chẩn 
@@ -144,7 +171,12 @@ học sâu. Việc sử dụng các nền tảng này của NVIDIA giúp VinBrai
 thời gian phát triển các giải pháp ứng dụng AI cũng như tạo điều 
 kiện để các chuyên gia tiếp cận nhiều giải pháp trực quan hơn.
 </pre>
+        <script>document.querySelector('.home-icon').addEventListener('click', (event) => {
+                event.preventDefault();
+                window.location.href = 'index.html';
+            });</script>
 
-</div>
+    </div>
 </body>
+
 </html>
